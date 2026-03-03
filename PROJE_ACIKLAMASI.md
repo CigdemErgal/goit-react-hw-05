@@ -154,6 +154,4 @@ Proje teslim oncesi kontrol edildi:
 1. GitHub repo linki (kaynak kod)
 2. Vercel linki (canli proje)
 
----
-
-Eger istersen bu dosyanin daha da kisa bir versiyonunu (1 sayfalik ozet) de hazirlayabilirim.
+--
