@@ -1,0 +1,17 @@
+.section {
+  display: grid;
+  gap: 28px;
+}
+
+.title {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 800;
+  color: #0f766e;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+}

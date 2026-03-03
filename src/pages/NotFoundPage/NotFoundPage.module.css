@@ -1,0 +1,16 @@
+.section {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+}
+
+.title {
+  font-size: 52px;
+}
+
+.link {
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #0ea5e9;
+}

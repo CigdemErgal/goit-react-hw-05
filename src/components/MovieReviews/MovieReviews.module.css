@@ -1,0 +1,21 @@
+.list {
+  display: grid;
+  gap: 16px;
+}
+
+.item {
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
+}
+
+.author {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.content {
+  white-space: pre-line;
+  color: #334155;
+}
