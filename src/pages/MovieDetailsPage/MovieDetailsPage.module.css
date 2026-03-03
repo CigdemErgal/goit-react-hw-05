@@ -1,3 +1,4 @@
+/* Detay sayfasinin ust bolum yapisi */
 .section {
   display: grid;
   gap: 22px;
@@ -12,6 +13,7 @@
   background-color: #0f766e;
 }
 
+/* Poster + metin bilgilerinin iki sutunlu duzeni */
 .wrapper {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -51,6 +53,7 @@
   font-size: 22px;
 }
 
+/* Cast/Reviews linklerini tasiyan ek bilgi kutusu */
 .additional {
   display: grid;
   gap: 10px;
@@ -74,6 +77,7 @@
   color: #ea580c;
 }
 
+/* Mobilde layout tek sutuna dusurulur */
 @media (max-width: 768px) {
   .wrapper {
     grid-template-columns: 1fr;

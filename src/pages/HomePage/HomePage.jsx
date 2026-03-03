@@ -1,3 +1,4 @@
+// Ana sayfa: guncel trend filmleri listeler.
 import { useEffect, useState } from 'react';
 import MovieList from '../../components/MovieList/MovieList';
 import { fetchTrendingMovies } from '../../services/tmdbApi';
@@ -9,6 +10,7 @@ export default function HomePage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // Sayfa acildiginda sadece bir kez trend filmleri ceker.
     async function getTrendingMovies() {
       try {
         setIsLoading(true);

@@ -1,15 +1,18 @@
+// Secilen filmin oyuncu kadrosunu getirir.
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieCredits, getImageUrl } from '../../services/tmdbApi';
 import css from './MovieCast.module.css';
 
 export default function MovieCast() {
+  // URL'den movieId parametresi alinir.
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // movieId degistikce cast bilgisi tekrar cekilir.
     async function getCast() {
       try {
         setIsLoading(true);

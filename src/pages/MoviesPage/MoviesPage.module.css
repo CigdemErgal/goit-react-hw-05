@@ -1,3 +1,4 @@
+/* Arama sayfasinin genel yerlesimi */
 .section {
   display: grid;
   gap: 24px;
@@ -8,6 +9,7 @@
   gap: 12px;
 }
 
+/* Arama inputu ve buton stilleri */
 .input {
   flex: 1;
   padding: 12px 14px;

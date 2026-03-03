@@ -1,3 +1,4 @@
+// NavLink aktif oldugunda farkli class verir.
 import { NavLink } from 'react-router-dom';
 import css from './Navigation.module.css';
 
@@ -7,6 +8,7 @@ function getLinkClassName({ isActive }) {
 
 export default function Navigation() {
   return (
+    // Uygulamanin ust navigasyon alani.
     <header className={css.header}>
       <nav className={css.nav}>
         <p className={css.logo}>

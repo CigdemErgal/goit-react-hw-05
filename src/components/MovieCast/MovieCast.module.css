@@ -1,3 +1,4 @@
+/* Oyuncu kartlari icin esnek grid */
 .list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -11,6 +12,7 @@
   box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
 }
 
+/* Oyuncu gorseli ve fallback kutusu */
 .image,
 .placeholder {
   width: 100%;

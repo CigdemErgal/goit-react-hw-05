@@ -1,15 +1,18 @@
+// Secilen filmin yorumlarini getirir.
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieReviews } from '../../services/tmdbApi';
 import css from './MovieReviews.module.css';
 
 export default function MovieReviews() {
+  // URL'den movieId parametresi alinir.
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // movieId degisikliginde yorumlari yeniden ceker.
     async function getReviews() {
       try {
         setIsLoading(true);

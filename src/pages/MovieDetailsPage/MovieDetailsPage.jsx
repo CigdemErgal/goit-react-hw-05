@@ -1,15 +1,19 @@
+// Film detay sayfasi ve alt rotalar (cast/reviews).
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 import { fetchMovieDetails, getImageUrl } from '../../services/tmdbApi';
 import css from './MovieDetailsPage.module.css';
 
+// Alt linklerde aktiflik class'ini ayarlar.
 function getNavLinkClassName({ isActive }) {
   return isActive ? `${css.link} ${css.active}` : css.link;
 }
 
 export default function MovieDetailsPage() {
+  // URL'den movieId, location'dan onceki sayfa bilgisi alinir.
   const { movieId } = useParams();
   const location = useLocation();
+  // Geri donus linki sayfa yenilense de korunur.
   const backLinkRef = useRef(location.state?.from || '/movies');
 
   const [movie, setMovie] = useState(null);
@@ -17,6 +21,7 @@ export default function MovieDetailsPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // movieId degistiginde yeni film detayi ceker.
     async function getMovie() {
       try {
         setIsLoading(true);

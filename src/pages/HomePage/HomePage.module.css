@@ -1,3 +1,4 @@
+/* Ana sayfa icerigi ve baslik gorunumu */
 .section {
   display: grid;
   gap: 28px;
@@ -10,6 +11,7 @@
   color: #0f766e;
 }
 
+/* Mobilde basligi daha okunur olcekler */
 @media (max-width: 768px) {
   .title {
     font-size: 36px;

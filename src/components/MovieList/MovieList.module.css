@@ -1,3 +1,4 @@
+/* Film kartlari icin responsive grid */
 .list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -11,6 +12,7 @@
   box-shadow: 0 6px 20px rgba(31, 41, 55, 0.12);
 }
 
+/* Kart link davranisi ve hover efekti */
 .link {
   display: grid;
   color: #1f2937;
@@ -23,6 +25,7 @@
   box-shadow: 0 8px 24px rgba(15, 118, 110, 0.22);
 }
 
+/* Poster alani ve yedek gorunum */
 .poster,
 .placeholder {
   width: 100%;
@@ -49,6 +52,7 @@
   color: #0f766e;
 }
 
+/* Mobilde kart araligini ve baslik boyutunu azalt */
 @media (max-width: 768px) {
   .list {
     gap: 16px;

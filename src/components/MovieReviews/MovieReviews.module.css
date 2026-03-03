@@ -1,3 +1,4 @@
+/* Yorumlari alt alta kart seklinde gosterir */
 .list {
   display: grid;
   gap: 16px;
@@ -10,6 +11,7 @@
   box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
 }
 
+/* Yorum basligi ve metin stili */
 .author {
   margin-bottom: 8px;
   font-weight: 700;

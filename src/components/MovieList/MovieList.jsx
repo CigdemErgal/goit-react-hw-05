@@ -1,8 +1,10 @@
+// Film listesini kart yapisinda gosterir.
 import { Link, useLocation } from 'react-router-dom';
 import { getImageUrl } from '../../services/tmdbApi';
 import css from './MovieList.module.css';
 
 export default function MovieList({ movies }) {
+  // Geldigimiz sayfayi saklayip detaydan geri donuste kullanacagiz.
   const location = useLocation();
 
   return (

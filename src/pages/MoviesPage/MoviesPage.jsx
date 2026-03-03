@@ -1,3 +1,4 @@
+// Arama sayfasi: URL query param ile film arar.
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import MovieList from '../../components/MovieList/MovieList';
@@ -5,6 +6,7 @@ import { fetchMoviesByQuery } from '../../services/tmdbApi';
 import css from './MoviesPage.module.css';
 
 export default function MoviesPage() {
+  // URL'deki arama parametrelerini yonetir.
   const [searchParams, setSearchParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -18,6 +20,7 @@ export default function MoviesPage() {
       return;
     }
 
+    // Query degistiginde API'den yeni liste ceker.
     async function getMovies() {
       try {
         setIsLoading(true);
@@ -36,6 +39,7 @@ export default function MoviesPage() {
   }, [query]);
 
   function handleSubmit(event) {
+    // Form gonderiminde input degerini URL'e yazar.
     event.preventDefault();
     const value = event.currentTarget.elements.query.value.trim();
 

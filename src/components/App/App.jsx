@@ -1,8 +1,10 @@
+// Uygulamanin ana catisi ve route tanimlari.
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import css from './App.module.css';
 
+// Sayfalar ve alt bilesenler lazy load edilir.
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const MoviesPage = lazy(() => import('../../pages/MoviesPage/MoviesPage'));
 const MovieDetailsPage = lazy(() => import('../../pages/MovieDetailsPage/MovieDetailsPage'));
@@ -15,6 +17,7 @@ export default function App() {
     <div>
       <Navigation />
       <main className={css.main}>
+        {/* Lazy yuklenen sayfalar icin gecici fallback */}
         <Suspense fallback={<p>Loading page...</p>}>
           <Routes>
             <Route path="/" element={<HomePage />} />
